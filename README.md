@@ -1,81 +1,80 @@
-# 🧠 Neurônio de Rosenblatt em Planilha
+# ðŸ§  NeurÃ´nio de Rosenblatt em Planilha
 
-Projeto de demonstração prática de um **perceptron de camada única**, implementado diretamente em uma **planilha de cálculo**. O objetivo foi treinar o neurônio com entradas lógicas, ajustando pesos e bias até atingir a classificação correta com base na lógica aprendida.
-
----
-
-## 📌 O que é um Neurônio de Rosenblatt?
-
-O neurônio de Rosenblatt é a base do perceptron, um modelo simples de rede neural proposto por Frank Rosenblatt em 1958. Ele realiza:
-
-- Soma ponderada das entradas (input * peso)
-- Soma com um bias (limiar de ativação)
-- Aplicação de uma função de ativação (geralmente degrau)
-
-Esse processo permite **classificar padrões binários** (como AND, OR, etc.), sendo o princípio das redes neurais modernas.
+Este projeto demonstra o treinamento de um **Perceptron de Rosenblatt** utilizando uma **planilha Excel**, com duas abas organizadas para facilitar o entendimento teÃ³rico e prÃ¡tico. Foi desenvolvido como atividade acadÃªmica e demonstra conceitos fundamentais de Redes Neurais.
 
 ---
 
-## 📊 O que contém neste projeto?
+## ðŸ“š O que vocÃª vai encontrar
 
-O projeto foi implementado em uma planilha Excel com duas abas:
-
-### ✅ `Treinamento`
-Nesta aba, os dados de entrada são processados e a planilha realiza iterações de treinamento, ajustando os pesos com base no erro obtido.
-
-- Taxa de aprendizado (α)
-- Cálculo do erro (desejado - obtido)
-- Atualização dos pesos com:  
-  `peso_novo = peso_anterior + α * erro * entrada`
-- Atualização do bias
-
-### ✅ `Neurônio`
-Nesta aba são aplicados os valores dos pesos e bias obtidos no treinamento para prever novas saídas. Ou seja, aqui está a **rede já treinada**.
+- ImplementaÃ§Ã£o de um **Perceptron (neurÃ´nio artificial)** com pesos ajustÃ¡veis  
+- CÃ¡lculo do **erro**, **atualizaÃ§Ã£o de pesos** e **bias**  
+- AplicaÃ§Ã£o da **regra de atualizaÃ§Ã£o de Rosenblatt**  
+- Duas abas:
+  - `NeurÃ´nio`: visualizaÃ§Ã£o da rede neural e iteraÃ§Ãµes
+  - `Treinamento`: registros dos padrÃµes, saÃ­das desejadas e pesos ao longo do processo
 
 ---
 
-## 🧮 Estatística envolvida
+## ðŸ“Š Como funciona o treinamento
 
-O projeto inclui os seguintes conceitos fundamentais:
+A planilha simula o comportamento de um neurÃ´nio com entradas binÃ¡rias, aplicando a seguinte **fÃ³rmula clÃ¡ssica**:
 
-- **Erro quadrático**
-- **Gradiente para ajuste de pesos**
-- **Aprendizado supervisionado**
-- **Função de ativação tipo degrau (step function)**
-- **Balanceamento com pesos e bias (limiar)**
+```text
+y = f(w1*x1 + w2*x2 + ... + wn*xn + bias)
+```
 
-Essa é uma introdução sólida à matemática por trás do aprendizado de máquina, em um ambiente acessível como o Excel.
+Com:
 
----
+- `x` = entradas  
+- `w` = pesos  
+- `bias` = peso fixo (threshold)  
+- `f` = funÃ§Ã£o de ativaÃ§Ã£o degrau
 
-## 🚀 Como usar
+A atualizaÃ§Ã£o dos pesos segue a regra:
 
-1. Abra a planilha no Excel ou Google Sheets
-2. Acesse a aba `Treinamento` para acompanhar os ajustes dos pesos
-3. A aba `Neurônio` mostra como as entradas são processadas com os pesos finais
-4. Você pode alterar as entradas e observar como o neurônio responde
+```text
+w(n+1) = w(n) + taxa_aprendizado * erro * entrada
+```
 
----
+E o **bias** tambÃ©m Ã© atualizado:
 
-## 🖼️ Captura de Tela (opcional)
-
-> *(Aqui você pode adicionar futuramente um print das duas abas da planilha com destaque nos pesos, bias e respostas)*
-
----
-
-## 📁 Arquivo
-
-> O arquivo `.xlsx` está disponível neste repositório com o nome:  
-📄 Final - Atividade Prática.xlsx
+```text
+bias(n+1) = bias(n) + taxa_aprendizado * erro
+```
 
 ---
 
-## ✍️ Autor
+## ðŸ“ˆ Resultado do projeto
+
+ApÃ³s as iteraÃ§Ãµes, o neurÃ´nio aprende a **classificar corretamente os padrÃµes de entrada**, ajustando os pesos com base no erro entre a saÃ­da desejada e a saÃ­da real.
+
+---
+
+## âš ï¸ VisualizaÃ§Ã£o da planilha
+
+> O arquivo estÃ¡ grande e nÃ£o pode ser visualizado diretamente no GitHub.  
+> **FaÃ§a o download para acessar todo o conteÃºdo.**
+
+ðŸ“Ž [ðŸ“¥ Clique aqui para baixar a planilha](./Final%20-%20Atividade%20Pratica.xlsx)
+
+---
+
+## ðŸ§  Conceito: O que Ã© o NeurÃ´nio de Rosenblatt?
+
+O **Perceptron de Rosenblatt** foi o primeiro modelo matemÃ¡tico funcional de uma rede neural artificial. Criado por **Frank Rosenblatt** em 1958, Ã© a base para muitas redes modernas.  
+Seu objetivo Ã© **aprender** a separar classes lineares com base em exemplos (entradas e saÃ­das desejadas), ajustando pesos sinÃ¡pticos automaticamente.
+
+---
+
+## âœï¸ Autor
 
 **Rodrigo Ribeiro Carvalho**  
-Analista de Dados e entusiasta em IA e automações  
-GitHub: [Rodrigo-RRC](https://github.com/Rodrigo-RRC)
+ðŸ“ JoÃ£o Pessoa â€“ PB  
+ðŸ”— [PortfÃ³lio no GitHub](https://github.com/Rodrigo-RRC)  
+ðŸ“§ rodrigoribeiroc.dev@gmail.com
 
 ---
 
-> “A base do futuro está nas conexões simples que aprendem com o passado.”
+## âœ… Status
+
+> Projeto concluÃ­do e disponÃ­vel para consulta acadÃªmica e demonstraÃ§Ã£o de fundamentos de aprendizado de mÃ¡quina.
