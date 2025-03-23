@@ -90,11 +90,14 @@ O comportamento visual da célula muda conforme o RU:
 ---
 ---
 
-## 🎥 Demonstração em Vídeo
+### 🎥 Demonstração em Vídeo
 
-####Veja o neurônio em ação na planilha:
+Veja o neurônio em ação na planilha:
 
-👉 [Clique aqui para baixar](video_neuronio.mp4)
+[![Capa do vídeo](https://raw.githubusercontent.com/Rodrigo-RRC/neuronio-rosenblatt/main/capa_video_neuronio.png)](https://github.com/Rodrigo-RRC/neuronio-rosenblatt/blob/main/video_neuronio.mp4)
+
+> 📥 **Clique na imagem acima** para baixar o vídeo diretamente.
+
 
 
 ## 🧑‍💻 Autor
