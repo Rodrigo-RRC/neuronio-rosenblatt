@@ -80,7 +80,7 @@ O comportamento visual da célula muda conforme o RU:
 
 ---
 
-![Rede Neural](Rede Neural.png)
+![Rede Neural](RedeNeural.png)
 
 ---
 ---
