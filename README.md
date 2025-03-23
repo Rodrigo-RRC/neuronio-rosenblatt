@@ -80,9 +80,10 @@ O comportamento visual da célula muda conforme o RU:
 
 ---
 
-## 📸 Espaço para Capturas de Tela
+![Rede Neural](RedeNeural.png)
 
-![Rede Neural](Rede Neural.png)
+---
+---
 
 ![Treinamento](Treinamento.png)
 
