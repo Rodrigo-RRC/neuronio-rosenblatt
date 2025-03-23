@@ -1,3 +1,4 @@
+
 # 🧠 Neurônio de Rosenblatt Treinado em Planilha
 
 Este projeto apresenta um neurônio de Rosenblatt (Perceptron de camada única) implementado e treinado **inteiramente em uma planilha**, com visualização e ajustes dinâmicos. O objetivo é demonstrar, de forma didática, os fundamentos do Perceptron, incluindo o cálculo dos pesos, bias e função de ativação.
@@ -17,34 +18,33 @@ A planilha contém duas abas principais:
 
 ### 🧮 Fórmulas do Perceptron
 
-A predição \( y' \) é calculada da seguinte forma:
+A predição y' é calculada da seguinte forma:
 
-\[
-y' = \begin{cases}
-1, & \text{se } \sum (x_i \cdot w_i) + b \geq RU \\
-0, & \text{caso contrário}
-\end{cases}
-\]
+Se a soma ponderada dos sinais de entrada for maior ou igual ao RU (limiar), o neurônio ativa (1); caso contrário, inativa (0):
+
+```
+y' = 1, se  (x1 * w1 + x2 * w2 + ... + b) ≥ RU  
+y' = 0, caso contrário
+```
 
 Onde:
-- \( x_i \) = entradas
-- \( w_i \) = pesos
-- \( b \) = bias
-- **RU** = valor de limiar dinâmico (controlado na planilha)
+- `x` = entradas
+- `w` = pesos
+- `b` = bias (viés)
+- **RU** = limiar ajustável
 
-### 🔁 Regra de Atualização
+---
 
-\[
-w_i = w_i + \eta \cdot (y - y') \cdot x_i
-\]
+### 🔁 Regra de Atualização dos Pesos
 
-\[
-b = b + \eta \cdot (y - y')
-\]
+```
+w = w + η * (y - y') * x  
+b = b + η * (y - y')
+```
 
-- \( \eta \) = taxa de aprendizado (learning rate)
-- \( y \) = valor esperado
-- \( y' \) = valor previsto
+- `η` = taxa de aprendizado (learning rate)
+- `y` = saída esperada
+- `y'` = saída prevista
 
 ---
 
@@ -59,16 +59,49 @@ O comportamento visual da célula muda conforme o RU:
 - ✅ Neurônio ativado: **verde**
 - ❌ Neurônio inativo: **vermelho**
 
+⚠️ O valor do RU deve ser um número **natural** (inteiro positivo).
+
 ---
 
-## 🧪 Exemplos de Entrada
+## 🧪 Exemplo de Entrada
 
-| Entrada x1 | Entrada x2 | Pesos w1/w2 | Bias | RU | Ativação |
-|------------|------------|--------------|------|----|----------|
-| 1          | 1          | 0.4 / 0.6     | 0.2  | 1  | ✅       |
-| 0          | 1          | 0.4 / 0.6     | 0.2  | 1  | ❌       |
+| x1 | x2 | w1 | w2 | Bias | RU | Ativação |
+|----|----|----|----|------|----|----------|
+| 1  | 1  | 0.4| 0.6| 0.2  | 1  | ✅       |
+| 0  | 1  | 0.4| 0.6| 0.2  | 1  | ❌       |
 
 ---
 
 ## 📁 Estrutura da Planilha
 
+```
+📄 Final - Atividade Pratica.xlsx
+├── 🧠 Neurônio          → Interface com limiar (RU)
+└── 📈 Treinamento       → Ajuste manual dos pesos e bias
+```
+
+---
+
+## 📌 Observações
+
+- Todas as fórmulas estão embutidas diretamente nas células da planilha.
+- A aba **Neurônio** é interativa e visual.
+- O projeto simula os princípios básicos de uma rede neural linear.
+
+---
+
+## 🧑‍💻 Autor
+
+**Rodrigo Ribeiro Carvalho**  
+GitHub: [Rodrigo-RRC](https://github.com/Rodrigo-RRC)  
+LinkedIn: [linkedin.com/in/rodrigo-ribeiro-datascience](https://www.linkedin.com/in/rodrigo-ribeiro-datascience)
+
+---
+
+## ✅ Status: Projeto Concluído e Funcional
+
+Este projeto faz parte do meu portfólio de aprendizado prático em ciência de dados e redes neurais.
+
+---
+
+🚀 Projeto simples, prático e totalmente funcional – direto da planilha para o mundo da IA.
