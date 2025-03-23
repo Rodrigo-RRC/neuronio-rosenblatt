@@ -1,80 +1,102 @@
-# 🧠 Neurônio de Rosenblatt em Planilha
 
-Este projeto demonstra o treinamento de um **Perceptron de Rosenblatt** utilizando uma **planilha Excel**, com duas abas organizadas para facilitar o entendimento teórico e prático. Foi desenvolvido como atividade acadêmica e demonstra conceitos fundamentais de Redes Neurais.
+# 🧠 Neurônio de Rosenblatt Treinado em Planilha
 
----
-
-## 📚 O que você vai encontrar
-
-- Implementação de um **Perceptron (neurônio artificial)** com pesos ajustáveis  
-- Cálculo do **erro**, **atualização de pesos** e **bias**  
-- Aplicação da **regra de atualização de Rosenblatt**  
-- Duas abas:
-  - `Neurônio`: visualização da rede neural e iterações
-  - `Treinamento`: registros dos padrões, saídas desejadas e pesos ao longo do processo
+Este projeto apresenta um neurônio de Rosenblatt (Perceptron de camada única) implementado e treinado **inteiramente em uma planilha**, com visualização e ajustes dinâmicos. O objetivo é demonstrar, de forma didática, os fundamentos do Perceptron, incluindo o cálculo dos pesos, bias e função de ativação.
 
 ---
 
-## 📊 Como funciona o treinamento
+## 📌 Sobre o Projeto
 
-A planilha simula o comportamento de um neurônio com entradas binárias, aplicando a seguinte **fórmula clássica**:
+A planilha contém duas abas principais:
 
-```text
-y = f(w1*x1 + w2*x2 + ... + wn*xn + bias)
+1. **Neurônio**: Interface visual onde o RU (limiar) pode ser alterado para observar o comportamento da ativação do neurônio.
+2. **Treinamento**: Cálculo manual do ajuste de pesos com base em acertos e erros, incluindo a regra de atualização do Perceptron.
+
+---
+
+## 📊 Conceitos Envolvidos
+
+### 🧮 Fórmulas do Perceptron
+
+A predição \( y' \) é calculada da seguinte forma:
+
+\[
+y' = egin{cases}
+1, & 	ext{se } \sum (x_i \cdot w_i) + b \geq RU \\
+0, & 	ext{caso contrário}
+\end{cases}
+\]
+
+Onde:
+- \( x_i \) = entradas
+- \( w_i \) = pesos
+- \( b \) = bias
+- **RU** = valor de limiar dinâmico (controlado na planilha)
+
+### 🔁 Regra de Atualização
+
+\[
+w_i = w_i + \eta \cdot (y - y') \cdot x_i
+\]
+
+\[
+b = b + \eta \cdot (y - y')
+\]
+
+- \( \eta \) = taxa de aprendizado (learning rate)
+- \( y \) = valor esperado
+- \( y' \) = valor previsto
+
+---
+
+## 🔧 RU como Limiar de Ativação
+
+Na aba **Neurônio**, é possível alterar o valor do **RU** dinamicamente. Ele atua como o **limiar de ativação**:
+
+- Se a **soma ponderada** for **maior ou igual ao RU**, o neurônio é ativado (retorna 1).
+- Se for **menor**, o neurônio permanece inativo (retorna 0).
+
+O comportamento visual da célula muda conforme o RU:
+- ✅ Neurônio ativado: **verde**
+- ❌ Neurônio inativo: **vermelho**
+
+---
+
+## 🧪 Exemplos de Entrada
+
+| Entrada x1 | Entrada x2 | Pesos w1/w2 | Bias | RU | Ativação |
+|------------|------------|--------------|------|----|----------|
+| 1          | 1          | 0.4 / 0.6     | 0.2  | 1  | ✅       |
+| 0          | 1          | 0.4 / 0.6     | 0.2  | 1  | ❌       |
+
+---
+
+## 📁 Estrutura da Planilha
+
+```
+📄 Final - Atividade Pratica.xlsx
+├── 🧠 Neurônio          → Interface com limiar (RU)
+└── 📈 Treinamento       → Ajuste dos pesos e bias
 ```
 
-Com:
+---
 
-- `x` = entradas  
-- `w` = pesos  
-- `bias` = peso fixo (threshold)  
-- `f` = função de ativação degrau
+## 📌 Observações
 
-A atualização dos pesos segue a regra:
-
-```text
-w(n+1) = w(n) + taxa_aprendizado * erro * entrada
-```
-
-E o **bias** também é atualizado:
-
-```text
-bias(n+1) = bias(n) + taxa_aprendizado * erro
-```
+- O valor de **RU deve ser um número natural**.
+- O modelo é didático e simula os fundamentos de um Perceptron simples.
+- As fórmulas estão embutidas nas células da planilha.
 
 ---
 
-## 📈 Resultado do projeto
-
-Após as iterações, o neurônio aprende a **classificar corretamente os padrões de entrada**, ajustando os pesos com base no erro entre a saída desejada e a saída real.
-
----
-
-## ⚠️ Visualização da planilha
-
-> O arquivo está grande e não pode ser visualizado diretamente no GitHub.  
-> **Faça o download para acessar todo o conteúdo.**
-
-📎 [📥 Clique aqui para baixar a planilha](./Final%20-%20Atividade%20Pratica.xlsx)
-
----
-
-## 🧠 Conceito: O que é o Neurônio de Rosenblatt?
-
-O **Perceptron de Rosenblatt** foi o primeiro modelo matemático funcional de uma rede neural artificial. Criado por **Frank Rosenblatt** em 1958, é a base para muitas redes modernas.  
-Seu objetivo é **aprender** a separar classes lineares com base em exemplos (entradas e saídas desejadas), ajustando pesos sinápticos automaticamente.
-
----
-
-## ✍️ Autor
+## 🧑‍💻 Autor
 
 **Rodrigo Ribeiro Carvalho**  
-📍 João Pessoa – PB  
-🔗 [Portfólio no GitHub](https://github.com/Rodrigo-RRC)  
-📧 rodrigoribeiroc.dev@gmail.com
+GitHub: [Rodrigo-RRC](https://github.com/Rodrigo-RRC)  
+LinkedIn: [linkedin.com/in/rodrigo-ribeiro-datascience](https://www.linkedin.com/in/rodrigo-ribeiro-datascience)
 
 ---
 
-## ✅ Status
+## ✅ Status: Projeto Concluído e Funcional
 
-> Projeto concluído e disponível para consulta acadêmica e demonstração de fundamentos de aprendizado de máquina.
+Este projeto faz parte do meu portfólio de aprendizado prático em ciência de dados e redes neurais.
