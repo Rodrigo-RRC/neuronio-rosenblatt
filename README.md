@@ -18,33 +18,27 @@ A planilha contém duas abas principais:
 
 ### 🧮 Fórmulas do Perceptron
 
-A predição y' é calculada da seguinte forma:
-
-Se a soma ponderada dos sinais de entrada for maior ou igual ao RU (limiar), o neurônio ativa (1); caso contrário, inativa (0):
-
 ```
-y' = 1, se  (x1 * w1 + x2 * w2 + ... + b) ≥ RU  
+y' = 1, se soma_ponderada + bias >= RU
 y' = 0, caso contrário
 ```
 
 Onde:
-- `x` = entradas
-- `w` = pesos
-- `b` = bias (viés)
-- **RU** = limiar ajustável
+- `x_i` = entradas
+- `w_i` = pesos
+- `b` = bias
+- **RU** = valor de limiar dinâmico (controlado na planilha)
 
----
-
-### 🔁 Regra de Atualização dos Pesos
+### 🔁 Regra de Atualização
 
 ```
-w = w + η * (y - y') * x  
+w_i = w_i + η * (y - y') * x_i
 b = b + η * (y - y')
 ```
 
 - `η` = taxa de aprendizado (learning rate)
-- `y` = saída esperada
-- `y'` = saída prevista
+- `y` = valor esperado
+- `y'` = valor previsto
 
 ---
 
@@ -59,16 +53,14 @@ O comportamento visual da célula muda conforme o RU:
 - ✅ Neurônio ativado: **verde**
 - ❌ Neurônio inativo: **vermelho**
 
-⚠️ O valor do RU deve ser um número **natural** (inteiro positivo).
-
 ---
 
-## 🧪 Exemplo de Entrada
+## 🧪 Exemplos de Entrada
 
-| x1 | x2 | w1 | w2 | Bias | RU | Ativação |
-|----|----|----|----|------|----|----------|
-| 1  | 1  | 0.4| 0.6| 0.2  | 1  | ✅       |
-| 0  | 1  | 0.4| 0.6| 0.2  | 1  | ❌       |
+| Entrada x1 | Entrada x2 | Pesos w1/w2 | Bias | RU | Ativação |
+|------------|------------|--------------|------|----|----------|
+| 1          | 1          | 0.4 / 0.6     | 0.2  | 1  | ✅       |
+| 0          | 1          | 0.4 / 0.6     | 0.2  | 1  | ❌       |
 
 ---
 
@@ -77,16 +69,20 @@ O comportamento visual da célula muda conforme o RU:
 ```
 📄 Final - Atividade Pratica.xlsx
 ├── 🧠 Neurônio          → Interface com limiar (RU)
-└── 📈 Treinamento       → Ajuste manual dos pesos e bias
+└── 📈 Treinamento       → Ajuste dos pesos e bias
 ```
 
 ---
 
-## 📌 Observações
+## 📎 Download da Planilha
 
-- Todas as fórmulas estão embutidas diretamente nas células da planilha.
-- A aba **Neurônio** é interativa e visual.
-- O projeto simula os princípios básicos de uma rede neural linear.
+👉 [Clique aqui para baixar](Final%20-%20Atividade%20Pratica.xlsx)
+
+---
+
+## 📸 Espaço para Capturas de Tela
+
+Adicione aqui prints da planilha, ativação visual do neurônio e trechos do treinamento manual.
 
 ---
 
@@ -101,7 +97,3 @@ LinkedIn: [linkedin.com/in/rodrigo-ribeiro-datascience](https://www.linkedin.com
 ## ✅ Status: Projeto Concluído e Funcional
 
 Este projeto faz parte do meu portfólio de aprendizado prático em ciência de dados e redes neurais.
-
----
-
-🚀 Projeto simples, prático e totalmente funcional – direto da planilha para o mundo da IA.
