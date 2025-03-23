@@ -82,7 +82,9 @@ O comportamento visual da célula muda conforme o RU:
 
 ## 📸 Espaço para Capturas de Tela
 
-Adicione aqui prints da planilha, ativação visual do neurônio e trechos do treinamento manual.
+![Rede Neural](Rede Neural.png)
+
+![Treinamento](Treinamento.png)
 
 ---
 
