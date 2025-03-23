@@ -79,12 +79,12 @@ O comportamento visual da célula muda conforme o RU:
 👉 [Clique aqui para baixar](Final%20-%20Atividade%20Pratica.xlsx)
 
 ---
-
+## Print Tela Rede Neural
 ![Rede Neural](RedeNeural.png)
 
 ---
 ---
-
+## Print Tela Treinamento
 ![Treinamento](Treinamento.png)
 
 ---
