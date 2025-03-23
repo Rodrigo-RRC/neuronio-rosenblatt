@@ -90,7 +90,7 @@ O comportamento visual da célula muda conforme o RU:
 ---
 ---
 
-### 🎥 Demonstração em Vídeo
+## 🎥 Demonstração em Vídeo
 
 Veja o neurônio em ação na planilha:
 
