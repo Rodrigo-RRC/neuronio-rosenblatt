@@ -1,4 +1,3 @@
-
 # 🧠 Neurônio de Rosenblatt Treinado em Planilha
 
 Este projeto apresenta um neurônio de Rosenblatt (Perceptron de camada única) implementado e treinado **inteiramente em uma planilha**, com visualização e ajustes dinâmicos. O objetivo é demonstrar, de forma didática, os fundamentos do Perceptron, incluindo o cálculo dos pesos, bias e função de ativação.
@@ -21,9 +20,9 @@ A planilha contém duas abas principais:
 A predição \( y' \) é calculada da seguinte forma:
 
 \[
-y' = egin{cases}
-1, & 	ext{se } \sum (x_i \cdot w_i) + b \geq RU \\
-0, & 	ext{caso contrário}
+y' = \begin{cases}
+1, & \text{se } \sum (x_i \cdot w_i) + b \geq RU \\
+0, & \text{caso contrário}
 \end{cases}
 \]
 
@@ -73,30 +72,3 @@ O comportamento visual da célula muda conforme o RU:
 
 ## 📁 Estrutura da Planilha
 
-```
-📄 Final - Atividade Pratica.xlsx
-├── 🧠 Neurônio          → Interface com limiar (RU)
-└── 📈 Treinamento       → Ajuste dos pesos e bias
-```
-
----
-
-## 📌 Observações
-
-- O valor de **RU deve ser um número natural**.
-- O modelo é didático e simula os fundamentos de um Perceptron simples.
-- As fórmulas estão embutidas nas células da planilha.
-
----
-
-## 🧑‍💻 Autor
-
-**Rodrigo Ribeiro Carvalho**  
-GitHub: [Rodrigo-RRC](https://github.com/Rodrigo-RRC)  
-LinkedIn: [linkedin.com/in/rodrigo-ribeiro-datascience](https://www.linkedin.com/in/rodrigo-ribeiro-datascience)
-
----
-
-## ✅ Status: Projeto Concluído e Funcional
-
-Este projeto faz parte do meu portfólio de aprendizado prático em ciência de dados e redes neurais.
